@@ -200,13 +200,13 @@ textarea:focus {
   .text-boxes {
     flex-direction: column;
     height: auto;
-    min-height: calc(100vh - 180px);
+    min-height: calc(100vh - 220px);
     padding: 20px;
     gap: 15px;
   }
 
   .text-panel {
-    min-height: 250px;
+    min-height: 200px;
     height: auto;
   }
 
@@ -214,6 +214,7 @@ textarea:focus {
     min-height: 200px;
     height: auto;
     padding: 16px 20px;
+    font-size: 16px;
   }
 
   .center-controls {
@@ -222,10 +223,8 @@ textarea:focus {
   }
 
   #obfuscate-btn {
-    width: 36px;
-    height: 36px;
-    transform: rotate(90deg);
-    margin: 5px 0;
+    transform: rotate(90deg) translateX(0);
+    margin: 10px 0;
   }
 
   .btn-icon {
@@ -329,4 +328,25 @@ textarea::-webkit-scrollbar-thumb:hover {
   textarea {
     padding: 20px 24px;
   }
+}
+
+/* 添加加载动画样式 */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-icon {
+  animation: spin 1s linear infinite;
+}
+
+/* 禁用状态样式 */
+#obfuscate-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
