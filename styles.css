@@ -1,0 +1,332 @@
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #f08c21;
+}
+
+.site-header {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 6px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  width: 90%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 24px;
+  color: #202124;
+  font-weight: 500;
+}
+
+.spacer {
+  flex: 1;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 85%;
+  max-width: 1600px;
+  margin: 15px auto;
+  padding: 0;
+  flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.text-boxes {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+  height: calc(100vh - 160px);
+  padding: 30px 40px;
+  box-sizing: border-box;
+}
+
+.text-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.panel-header label {
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.char-count {
+  font-size: 12px;
+  color: #5f6368;
+  margin-right: 4px;
+}
+
+textarea {
+  flex: 1;
+  width: 100%;
+  padding: 24px 32px;
+  border: none;
+  resize: none;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: inherit;
+  height: calc(100% - 60px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+  transition: background-color 0.2s ease;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.center-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+#obfuscate-btn {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+#obfuscate-btn:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-icon {
+  color: #5f6368;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-text {
+  display: none;
+}
+
+#copy-btn,
+#clear-btn {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  color: #5f6368;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#copy-btn:hover,
+#clear-btn:hover {
+  background-color: #f8f9fa;
+}
+
+#output-text {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    margin: 15px auto;
+  }
+
+  .text-boxes {
+    flex-direction: column;
+    height: auto;
+    min-height: calc(100vh - 180px);
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .text-panel {
+    min-height: 250px;
+    height: auto;
+  }
+
+  textarea {
+    min-height: 200px;
+    height: auto;
+    padding: 16px 20px;
+  }
+
+  .center-controls {
+    padding: 5px 0;
+    margin: 0;
+  }
+
+  #obfuscate-btn {
+    width: 36px;
+    height: 36px;
+    transform: rotate(90deg);
+    margin: 5px 0;
+  }
+
+  .btn-icon {
+    transform: translateX(0.5px);
+  }
+
+  .header-content {
+    padding: 0 20px;
+  }
+
+  .footer-content {
+    padding: 0 20px;
+  }
+
+  .panel-header {
+    padding: 12px 16px;
+  }
+
+  #copy-btn,
+  #clear-btn {
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+  }
+
+  #copy-btn svg,
+  #clear-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .char-count {
+    font-size: 11px;
+  }
+}
+
+.site-footer {
+  background-color: white;
+  padding: 20px 0;
+  margin-top: auto;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  width: 90%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+  color: #5f6368;
+  font-size: 14px;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content p a {
+  text-decoration: none;
+  color: rgb(228, 130, 60);
+}
+
+/* 自定义滚动条样式 */
+textarea::-webkit-scrollbar {
+  width: 12px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 添加panel-actions样式 */
+.panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 添加平板尺寸的媒体查询 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  .text-boxes {
+    padding: 25px;
+    gap: 25px;
+  }
+
+  textarea {
+    padding: 20px 24px;
+  }
+}
