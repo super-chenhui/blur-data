@@ -33,8 +33,12 @@
 .site-title {
   margin: 0;
   font-size: 24px;
+  letter-spacing: 0.15rem;
+  font-stretch: condensed;
+  text-transform: uppercase;
   color: #202124;
   font-weight: 500;
+  transform: scaleY(0.85);
 }
 
 .spacer {
@@ -42,7 +46,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f5f5f5;
@@ -98,11 +102,13 @@ body {
 .panel-header label {
   font-size: 14px;
   color: #5f6368;
+  font-weight: 500;
 }
 
 .char-count {
   font-size: 12px;
   color: #5f6368;
+  font-weight: 300;
   margin-right: 4px;
 }
 
@@ -114,7 +120,8 @@ textarea {
   resize: none;
   font-size: 16px;
   line-height: 1.6;
-  font-family: inherit;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
   height: calc(100% - 60px);
   overflow-y: auto;
   box-sizing: border-box;
@@ -262,7 +269,7 @@ textarea:focus {
 }
 
 .site-footer {
-  background-color: white;
+  background-color: rgba(255, 255, 255);
   padding: 20px 0;
   margin-top: auto;
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
@@ -274,8 +281,10 @@ textarea:focus {
   margin: 0 auto;
   padding: 0 40px;
   text-align: center;
-  color: #5f6368;
+  color: #5f6368ae;
   font-size: 14px;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
 }
 
 .footer-content p {
@@ -284,7 +293,7 @@ textarea:focus {
 
 .footer-content p a {
   text-decoration: none;
-  color: rgb(228, 130, 60);
+  color: rgba(228, 130, 60, 0.812);
 }
 
 /* 自定义滚动条样式 */
